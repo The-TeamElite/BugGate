@@ -117,7 +117,7 @@ Team: The TeamElite
 
 ## Demo — the CE-001 bug (live run, Nov 7, 2026)
 
-🎥 **Demo video:** https://youtu.be/KAMCQGZzcq4
+🎥 **Demo video:** https://youtube.com/shorts/tk2OhuHML40
 📝 **Blog post:** [BLOG.md](https://github.com/The-TeamElite/BugGate/blob/main/BLOG.md)
 
 The demo shows a real end-to-end run in the test group (8:48–8:53 PM IST):

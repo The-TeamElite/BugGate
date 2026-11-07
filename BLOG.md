@@ -95,7 +95,7 @@ After: the chat holds the context, the agent does the legwork, and the human kee
 
 **Team:** Rishabh Anand (CipherElite's creator & maintainer, the only approver, and the host — everything ran on his Mac) · Shreyas Lande (QA, user-side verification, docs, demo video & submission) · and the rest of our Flip the Switch team on setup and room ops.
 
-🎥 Demo: https://youtu.be/KAMCQGZzcq4
+🎥 Demo: https://youtube.com/shorts/tk2OhuHML40
 💻 Repo: https://github.com/The-TeamElite/BugGate
 
 #HowISwitch #FlipTheSwitch #WeMakeDevs #BuildInPublic #AIAgents
