@@ -111,3 +111,26 @@ We picked this track because this is not a demo bot. It's a real workflow — us
 
 
 Team: The TeamElite
+
+
+---
+
+## Demo — the CE-001 bug (live run, Nov 7, 2026)
+
+🎥 **Demo video:** https://youtu.be/KAMCQGZzcq4
+📝 **Blog post:** [BLOG.md](https://github.com/The-TeamElite/BugGate/blob/main/BLOG.md)
+
+The demo shows a real end-to-end run in the test group (8:48–8:53 PM IST):
+
+1. `/invite_agent @codex` brings the coding agent into the Telegram group.
+2. **The report:** CipherElite's `.alive` command is accessible to **all users** — it should be restricted to the server owner and sudo users.
+3. **Triage (CE-001):** the agent searched the repo and pinpointed `plugins/alive.py`, `inline_alive` handler, **line 328** — the inline handler has **no owner/sudo check** and returned the shared alive card to any requester (the `.alive` message handler already uses the owner/sudo decorator). Fix plan: restrict the inline handler to owner/sudo, return no results to others, and make results personal (no shared caching).
+4. **The approval gate:** the agent stopped and asked for ✅ or "Yes, fix it". A casual "@codex fix bug CE-001" was **refused** — only the exact approval unlocked the code. *AI proposes. The human decides.*
+5. **Fix + verification:** branch `fix/CE-001-alive-access`; inline alive now checks owner/sudo and disables shared caching. `python -m py_compile` **passed** and **nine isolated access checks passed** (owner / sudo / unauthorized).
+6. **Honest blocker:** PR creation was blocked — GitHub returned **403 "Resource not accessible by integration"** (the connected integration lacked repository write access). The agent posted the verified patch (`CE-001-alive-access.patch`) in the group instead. **No PR was created, and the live userbot was not changed.**
+
+## Team
+
+- **Rishabh Anand** — lead developer of CipherElite, only approver, host
+- **Shreyas Lande** — QA / verification, documentation, demo video, submission
+- **Chetan Anand & Himanshu** — team (setup, room ops, docs)
